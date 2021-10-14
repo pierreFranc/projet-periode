@@ -1,6 +1,14 @@
 # projet-periode
+Réalisé en Symfony 5 et php 8
 
-Explications sur le traitement du test technique:
+
+## Instalation et exécution du projet en dev
+git clone git@github.com:pierreFranc/projet-periode.git
+cd projet-periode
+symfony composer install
+
+
+## Test technique N1: Création d'entités avec 1 méthode métier + test unitaire
 
 1. J'ai réalisé le test sur la dernière version du framework Symfony
 2. Tenant compte de vos explications j'ai réalisé la modélisation suivante:
@@ -17,4 +25,6 @@ Le test est fonctionnel avec la commande phpunit: php ./vendor/bin/phpunit
 Il test 9 assertions.
 7. J'ai pris le parti d'utiliser le français dans la définition des méthodes, variables et commentaires en adéquation avec l'énnoncé du prototype isInclusDansPeriode.
 8. J'ai réalisé ce développement d'une traite d'où le peu de commit...
+
+## Test technique N2: Mise en place d'une Api + test phpuni
 
