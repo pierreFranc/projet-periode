@@ -2,12 +2,23 @@
 Réalisé en Symfony 5 et php 8
 
 
-## Instalation et exécution du projet en dev
+## Instalation et exécution du projet et des tests phpunit ( unitaires + endpoint d'Api)
+
+# Récup du repository sur github
 git clone git@github.com:pierreFranc/projet-periode.git
+# Aller sur le projet
 cd projet-periode
+# Installation des dépendances
 symfony composer install
+# Lancement du server interne de symfony
 symfony server:start -d
+# Lancement du service PostgreSql dans un container Dockeer
 docker-compose up -d
+# Pour l'utilisation d'une base de donnée de test ( phpunit )
+APP_ENV=test symfony console doctrine:database:create
+APP_ENV=test symfony console doctrine:migrations:migrate -n
+# Lancement des tests unitaires et d'API 
+symfony php bin/phpunit
 
 
 
@@ -28,6 +39,8 @@ Le test est fonctionnel avec la commande phpunit: php ./vendor/bin/phpunit
 Il test 9 assertions.
 7. J'ai pris le parti d'utiliser le français dans la définition des méthodes, variables et commentaires en adéquation avec l'énnoncé du prototype isInclusDansPeriode.
 8. J'ai réalisé ce développement d'une traite d'où le peu de commit...
+
+
 
 ## Test technique N2: Mise en place d'une Api + test phpunit
 

@@ -16,9 +16,16 @@ class PeriodeMensuelleApiTest extends ApiTestCase
         ]]);
 
         
-        //$data = json_decode($response->getContent());
+        $data = json_decode($response->getContent());
 
+        // Affichage de la réponse dans le terminal
+        //dd($data);
+
+        // Test de la Réponse à la requête
         $this->assertResponseIsSuccessful();
+
+        // Autres tests à ajouter 
+        // ...
         
     }
 }
