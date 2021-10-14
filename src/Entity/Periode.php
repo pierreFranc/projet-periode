@@ -8,6 +8,14 @@ use Exception;
 
 /**
  * @ORM\Entity(repositoryClass=PeriodeRepository::class)
+ * @ORM\InheritanceType("SINGLE_TABLE")
+ * @ORM\DiscriminatorColumn(name="type", type="string")
+ * @ORM\DiscriminatorMap(
+ * {
+ *      "mensuelle" = "PeriodeMensuelle", 
+ *      "absence" = "PeriodeAbsence",
+ *      "conge" = "PeriodeAbsenceConge",
+ * })
  */
 class Periode
 {
@@ -16,7 +24,7 @@ class Periode
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\Column(type="datetime")

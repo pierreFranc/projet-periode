@@ -15,6 +15,7 @@ symfony server:start -d  # Lancement du server interne de symfony
 
 docker-compose up -d  # Lancement du service PostgreSql dans un container Dockeer
 
+APP_ENV=test symfony console doctrine:database:drop --force
 APP_ENV=test symfony console doctrine:database:create  # Pour l'utilisation d'une base de donnée de test ( phpunit )
 APP_ENV=test symfony console doctrine:migrations:migrate -n
 
@@ -52,3 +53,8 @@ une requete SELECT qui est fait après l'insertion).
 3. Ajout d'ApiPlatform et définition par annotation du endpoint POST sur l'entité PeriodeMensuelleApi
 4. Ajout du test pour l'API endpoint de création d'une PeriodeMensuelleApi
 
+
+## Test technique N2 bis: Application de l'ApiPlatform avec les entités hérités
+
+Après recherche par curiosité j'ai finalement trouvé le point de blocage dans le mapping d'entités hérités avec ApiPlatform, la mise des id en protected au lieu de private a résolu le probleme. Vu dans plusieurs post sur le web.
+J'ai laissé la classe PeriodeMensuelleApi faite au test N2 mais il est plus intéressant de voir les classes PeriodeMensuelle et PeriodeAbsence avec leurs tests respectifs dans le dossier tests/Api.
