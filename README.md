@@ -36,5 +36,6 @@ J'ai posé ce choix suite à des dysfonctionnement qui apparaissent avec ApiPlat
 des entités hérités ( l'objet est bien créé en base mais un code d'erreur 500 est renvoyé suite à 
 une requete SELECT qui est fait après l'insertion).
 2. Dockerisation d'une Base PostgreSql
-3. Ajout d'ApiPlatform et définition par annotation d'un endpoint POST sur l'entité PeriodeMensuelleApi
+3. Ajout d'ApiPlatform et définition par annotation du endpoint POST sur l'entité PeriodeMensuelleApi
+4. Ajout du test pour l'API endpoint de création d'une PeriodeMensuelleApi
 
