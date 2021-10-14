@@ -4,21 +4,21 @@ Réalisé en Symfony 5 et php 8
 
 ## Instalation et exécution du projet et des tests phpunit ( unitaires + endpoint d'Api)
 
-# Récup du repository sur github
-git clone git@github.com:pierreFranc/projet-periode.git
-# Aller sur le projet
-cd projet-periode
-# Installation des dépendances
-symfony composer install
-# Lancement du server interne de symfony
-symfony server:start -d
-# Lancement du service PostgreSql dans un container Dockeer
-docker-compose up -d
-# Pour l'utilisation d'une base de donnée de test ( phpunit )
-APP_ENV=test symfony console doctrine:database:create
+
+git clone git@github.com:pierreFranc/projet-periode.git  # Récup du repository sur github
+
+cd projet-periode  # Aller sur le projet
+
+symfony composer install  # Installation des dépendances
+
+symfony server:start -d  # Lancement du server interne de symfony
+
+docker-compose up -d  # Lancement du service PostgreSql dans un container Dockeer
+
+APP_ENV=test symfony console doctrine:database:create  # Pour l'utilisation d'une base de donnée de test ( phpunit )
 APP_ENV=test symfony console doctrine:migrations:migrate -n
-# Lancement des tests unitaires et d'API 
-symfony php bin/phpunit
+
+symfony php bin/phpunit  # Lancement des tests unitaires et d'API 
 
 
 
