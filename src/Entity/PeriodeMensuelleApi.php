@@ -2,18 +2,18 @@
 
 namespace App\Entity;
 
-use App\Repository\PeriodeMensuselleApiRepository;
+use App\Repository\PeriodeMensuelleApiRepository;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
- * @ORM\Entity(repositoryClass=PeriodeMensuselleApiRepository::class)
+ * @ORM\Entity(repositoryClass=PeriodeMensuelleApiRepository::class)
  * @ApiResource(
  *      collectionOperations={"post"},
  *      itemOperations={"get"}
  * )
  */
-class PeriodeMensuselleApi
+class PeriodeMensuelleApi
 {
     /**
      * @ORM\Id
