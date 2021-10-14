@@ -6,6 +6,9 @@ Réalisé en Symfony 5 et php 8
 git clone git@github.com:pierreFranc/projet-periode.git
 cd projet-periode
 symfony composer install
+symfony server:start -d
+docker-compose up -d
+
 
 
 ## Test technique N1: Création d'entités avec 1 méthode métier + test unitaire
@@ -27,4 +30,8 @@ Il test 9 assertions.
 8. J'ai réalisé ce développement d'une traite d'où le peu de commit...
 
 ## Test technique N2: Mise en place d'une Api + test phpuni
-
+1. Création d'une entité PeriodeMensuelleApi sur laquelle je vais me baser pour faire la suite du test.
+J'ai posé ce choix suite à des dysfonctionnement qui apparaissent avec ApiPlatform pour le POST sur 
+des entités hérités ( l'objet est bien créé en base mais un code d'erreur 500 est renvoyé suite à 
+une requete SELECT qui est fait après l'insertion).
+2. Dockerisation d'une Base PostgreSql
