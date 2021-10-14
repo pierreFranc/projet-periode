@@ -4,9 +4,14 @@ namespace App\Entity;
 
 use App\Repository\PeriodeMensuselleApiRepository;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * @ORM\Entity(repositoryClass=PeriodeMensuselleApiRepository::class)
+ * @ApiResource(
+ *      collectionOperations={"post"},
+ *      itemOperations={}
+ * )
  */
 class PeriodeMensuselleApi
 {

@@ -29,9 +29,12 @@ Il test 9 assertions.
 7. J'ai pris le parti d'utiliser le français dans la définition des méthodes, variables et commentaires en adéquation avec l'énnoncé du prototype isInclusDansPeriode.
 8. J'ai réalisé ce développement d'une traite d'où le peu de commit...
 
-## Test technique N2: Mise en place d'une Api + test phpuni
+## Test technique N2: Mise en place d'une Api + test phpunit
+
 1. Création d'une entité PeriodeMensuelleApi sur laquelle je vais me baser pour faire la suite du test.
 J'ai posé ce choix suite à des dysfonctionnement qui apparaissent avec ApiPlatform pour le POST sur 
 des entités hérités ( l'objet est bien créé en base mais un code d'erreur 500 est renvoyé suite à 
 une requete SELECT qui est fait après l'insertion).
 2. Dockerisation d'une Base PostgreSql
+3. Ajout d'ApiPlatform et définition par annotation d'un endpoint POST sur l'entité PeriodeMensuelleApi
+
